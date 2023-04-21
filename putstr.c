@@ -4,7 +4,7 @@
 
 /**
  *_putstr - print character
- *s: the string to print
+ *@s: the string to print
  *Return: returns
  */
 

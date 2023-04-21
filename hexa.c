@@ -8,7 +8,7 @@
  *Return: returns
  */
 
-int  _hexa(unsigned long n, char *b)
+int _hexa(unsigned long n, char *b)
 {
 	int c = 0;
 
