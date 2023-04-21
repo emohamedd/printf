@@ -22,6 +22,7 @@ int check(va_list list, char c)
 int _printf(const char *format, ...)
 {
 	int i = 0;
+	int c = 0;
 	va_list ptr;
 
 	va_start(ptr, format);
@@ -31,14 +32,15 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == '%')
-				_putchar('%');
-			check(ptr, format[i]);
+			c += _putchar('%');
+			c += check(ptr, format[i]);
 		}
 		else
-			_putchar(format[i]);
+			c+= _putchar(format[i]);
 			i++;
 	}
 	va_end(ptr);
+	return (c);
 }
 int main(void)
 {

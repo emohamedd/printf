@@ -14,16 +14,16 @@ int _putnbr(int n)
 
 	if (n < 0)
 	{
-		_putchar('-');
+		c += _putchar('-');
 		n = -n;
 	}
 	if (n > 9)
 	{
-		_putnbr(n / 10);
-		_putnbr(n % 10);
+		c +=_putnbr(n / 10);
+		c += _putnbr(n % 10);
 	}
 	else
-		_putchar(n + '0');
-	return (n);
+		c += _putchar(n + '0');
+	return (c);
 
 }
