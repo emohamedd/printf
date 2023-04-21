@@ -10,4 +10,5 @@ int _putchar(char c);
 char _putstr(char *s;
 int _putnbr(int n);
 int _printf(const char *format, ...);
+int  _hexa(unsigned long n, char *b);
 #endif

@@ -18,6 +18,10 @@ int check(va_list list, char c)
 		return (_putnbr(va_arg(list, int)));
 	else if (c == 'b')
 		return (_tobinary(va_arg(list, long)));
+	else if (c == 'x')
+		return (_hexa(va_arg(list, int), "0123456789abcdef"));
+	else if (c == 'X')
+		return (_hexa(va_arg(list, int), "0123456789ABCDEF"));
 	return (0);
 }
 
@@ -51,5 +55,6 @@ int main(void)
 	_printf("%c\n", 'a');
 	_printf("%d\n", 7);
 	_printf("%%\n");
-	_printf("%b\n", 98);
+	_printf("%x\n", 10);
+	_printf("%X\n", 10);
 }
