@@ -32,11 +32,19 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == '%')
 				_putchar('%');
-			check(ptr, str[i]);
+			check(ptr, format[i]);
 		}
 		else
 			_putchar(format[i]);
 			i++;
 	}
 	va_end(ptr);
+}
+int main(void)
+{
+	_printf("amine and panda\n");
+	_printf("%s\n", "amine and panda");
+	_printf("%c\n", 'a');
+	_printf("%d\n", 7);
+	_printf("%%\n");
 }
