@@ -1,3 +1,4 @@
+
 #include "main.h"
 
 /* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
@@ -19,9 +20,14 @@ int check(va_list list, char c)
 	else if (c == 'b')
 		return (_tobinary(va_arg(list, long)));
 	else if (c == 'x')
-		return (_hexa(va_arg(list, int), "0123456789abcdef"));
+		return (_hexa(va_arg(list, unsigned int), "0123456789abcdef"));
 	else if (c == 'X')
-		return (_hexa(va_arg(list, int), "0123456789ABCDEF"));
+		return (_hexa(va_arg(list, unsigned int), "0123456789ABCDEF"));
+	else if (c == 'p')
+	{
+		_putstr("0x");
+		return (_hexa(va_arg(list, unsigned int), "0123456789abcdef") + 2);
+	}
 	return (0);
 }
 
@@ -57,4 +63,5 @@ int main(void)
 	_printf("%%\n");
 	_printf("%x\n", 10);
 	_printf("%X\n", 10);
+	_printf("%p\n", 4565);
 }
