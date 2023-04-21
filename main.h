@@ -15,6 +15,7 @@
 
 
 /* the prototype of all function we use to handle printf */
+int _rot13(char *s);
 int _reverse(char *s);
 int _octal(unsigned int x);
 int _putunbr(unsigned int x);

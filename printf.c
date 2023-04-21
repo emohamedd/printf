@@ -33,6 +33,8 @@ int check(va_list list, char c)
 		return (_octal(va_arg(list, int)));
 	else if (c == 'r')
 		return (_reverse(va_arg(list, char *)));
+	else if (c == 'R')
+		return (_rot13(va_arg(list, char *)));
 	return (0);
 }
 
@@ -72,4 +74,5 @@ int main(void)
 	_printf("%u\n", 2458);
 	_printf("%o\n", 8);
 	_printf("%r\n", "home");
+	_printf("%R\n", "abc");
 }
