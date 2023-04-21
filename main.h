@@ -15,7 +15,7 @@
 
 
 /* the prototype of all function we use to handle printf */
-
+int _reverse(char *s);
 int _octal(unsigned int x);
 int _putunbr(unsigned int x);
 long _tobinary(unsigned int x);
