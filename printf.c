@@ -30,6 +30,8 @@ int check(va_list list, char c)
 	}
 	else if (c == 'u')
 		return (_putunbr(va_arg(list, int)));
+	else if (c == 'o')
+		return (_octal(va_arg(list, int)));
 	return (0);
 }
 
@@ -67,4 +69,5 @@ int main(void)
 	_printf("%X\n", 10);
 	_printf("%p\n", 4565);
 	_printf("%u\n", 2458);
+	_printf("%o\n", 8);
 }
