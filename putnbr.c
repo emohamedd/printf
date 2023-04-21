@@ -8,7 +8,7 @@
  *Return: returns
  */
 
-void _putnbr(int n)
+int _putnbr(int n)
 {
 	int c = 0;
 
@@ -24,5 +24,6 @@ void _putnbr(int n)
 	}
 	else
 		_putchar(n + '0');
+	return (n);
 
 }
