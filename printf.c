@@ -28,6 +28,8 @@ int check(va_list list, char c)
 		_putstr("0x");
 		return (_hexa(va_arg(list, unsigned int), "0123456789abcdef") + 2);
 	}
+	else if (c == 'u')
+		return (_putunbr(va_arg(list, int)));
 	return (0);
 }
 
@@ -64,4 +66,5 @@ int main(void)
 	_printf("%x\n", 10);
 	_printf("%X\n", 10);
 	_printf("%p\n", 4565);
+	_printf("%u\n", 2458);
 }
