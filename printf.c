@@ -16,6 +16,8 @@ int check(va_list list, char c)
 		return (_putstr(va_arg(list, char *)));
 	else if (c == 'd' || c == 'i')
 		return (_putnbr(va_arg(list, int)));
+	else if (c == 'b')
+		return (_tobinary(va_arg(list, long)));
 	return (0);
 }
 
@@ -49,4 +51,5 @@ int main(void)
 	_printf("%c\n", 'a');
 	_printf("%d\n", 7);
 	_printf("%%\n");
+	_printf("%b\n", 98);
 }

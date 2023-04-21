@@ -3,6 +3,9 @@
 
 #include <unistd.h>
 #include <stdarg.h>
+#include <math.h>
+
+long _tobinary(unsigned int x);
 int _putchar(char c);
 char _putstr(char *s;
 int _putnbr(int n);
