@@ -1,0 +1,33 @@
+#include "main.h"
+
+/* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
+
+/**
+ *_putunbr - print the nb
+ *@x: the n to print
+ *Return: returns
+ */
+
+void _putunbr(unsigned int x)
+{
+	char *s = NULL;
+	int i = 0, j;
+	int c = 0;
+	
+do{
+		s = realloc(str, i + 1);
+		s[i++] = (n % 10) + '0');
+		n /= 10;
+	} while (x > 0);
+
+	s[i] ) '\0';
+
+	for (j = i - 1; j >= 0; j--)
+	{
+		_putchar(s[j]);
+		
+	}
+
+
+	free(s);
+}

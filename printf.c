@@ -3,8 +3,9 @@
 /* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
 
 /**
- *_printf - print character
- *@format: the character to print
+ *check - print character
+ *@list: variables params
+ *@c: variable char to check
  *Return: returns
  */
 
@@ -38,6 +39,14 @@ int check(va_list list, char c)
 	return (0);
 }
 
+/* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
+
+/**
+ *_printf - print character
+ *@format: the character to print
+ *Return: returns
+ */
+
 int _printf(const char *format, ...)
 {
 	int i = 0;
@@ -55,12 +64,20 @@ int _printf(const char *format, ...)
 			c += check(ptr, format[i]);
 		}
 		else
-			c+= _putchar(format[i]);
+			c += _putchar(format[i]);
 			i++;
 	}
 	va_end(ptr);
 	return (c);
 }
+
+/* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
+
+/**
+ *main - Entry point
+ *Return: Always 0 (Success)
+ */
+
 int main(void)
 {
 	_printf("amine and panda\n");
