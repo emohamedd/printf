@@ -13,5 +13,7 @@ int check(va_list list, char c)
 		return (_putchar(va_arg(list, int)));
 	else if (c == 's')
 		return (_print_string(va_arg(list, char *)));
+	else if (c == '%')
+		return (_print_percent(va_arg(list, int)));
 	return (0);
 }
