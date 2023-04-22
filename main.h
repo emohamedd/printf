@@ -15,6 +15,5 @@ int check(va_list list, char c);
 int _putchar(char c);
 int check(va_list list, char c);
 int _print_string(char *s);
-int _print_percent(char c);
 
 #endif
