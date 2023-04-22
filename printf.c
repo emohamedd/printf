@@ -1,7 +1,5 @@
 #include "main.h"
-
 /* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
-
 /**
  * _printf - print character
  * @format: the character to print
@@ -10,24 +8,46 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0;
-	int c = 0;
-	va_list ptr;
+	va_list arg;
+	int printed = 0;
+	char c, *s;
 
-	va_start(ptr, format);
-	while (format[i])
+	va_start(arg, format);
+
+	while (*format)
 	{
-		if (format[i] == '%')
+		if (*format == '%')
 		{
-			i++;
-			if (format[i] == '%')
-				c += _putchar('%');
-			c += check(ptr, format[i]);
+			format++;
+			switch (*format)
+			{
+				case 'c':
+					c = (char)va_arg(arg, int);
+					_putchar(c);
+					printed++;
+					break;
+				case 's':
+					s = va_arg(arg, char *);
+					while (*s)
+					{
+						_putchar(*s);
+						s++;
+						printed++;
+					}
+					break;
+				case '%':
+					_putchar('%');
+					printed++;
+					break;
+			}
 		}
 		else
-			c += _putchar(format[i]);
-		i++;
+		{
+			_putchar(*format);
+			printed++;
+		}
+		format++;
 	}
-	va_end(ptr);
-	return (c);
+	va_end(arg);
+	return (printed);
 }
