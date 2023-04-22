@@ -3,12 +3,12 @@
 /* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
 
 /**
- *_putnbr - print the nb
+ *_prin_int - print the nb
  *@n: the n to print
  *Return: returns
  */
 
-int _putnbr(int n)
+int _prin_int(int n)
 {
 	int c = 0;
 
@@ -19,11 +19,10 @@ int _putnbr(int n)
 	}
 	if (n > 9)
 	{
-		c +=_putnbr(n / 10);
-		c += _putnbr(n % 10);
+		c += _prin_int(n / 10);
+		c += _prin_int(n % 10);
 	}
 	else
 		c += _putchar(n + '0');
 	return (c);
-
 }

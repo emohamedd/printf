@@ -3,12 +3,12 @@
 /* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
 
 /**
- *_putstr - print character
+ *_prin_str - print character
  *@s: the string to print
  *Return: returns
  */
 
-int _putstr(char *s)
+int _prin_str(char *s)
 {
 	int i = 0;
 

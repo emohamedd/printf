@@ -1,32 +1,41 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* includes the lib we need */
-#include <stddef.h>
+#include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <stdarg.h>
-#include <math.h>
 #include <string.h>
+#include <math.h>
+#include <stddef.h>
+#include <unistd.h>
 
-/*containes all the defines */
+/* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
 
-#define BUFF_SIZE 1024
+/**
+ * struct flags - contains flags
+ * @plus: plus flag
+ * @space: space flag
+ * @hash: hash flag
+ * Return: returns
+ */
 
 
-/* the prototype of all function we use to handle printf */
-int _rot13(char *s);
-int _reverse(char *s);
-int _octal(unsigned int x);
-int _putunbr(unsigned int x);
-long _tobinary(unsigned int x);
-int _putchar(char c);
-char _putstr(char *s;
-int _putnbr(int n);
-int _hexa(unsigned long n, char *b);
+
+typedef struct flags
+{
+	int plus;
+	int space;
+	int hash;
+} flag_s;
+
 int _printf(const char *format, ...);
-
-
-
-
+int check(va_list list, char c);
+int _putchar(char c);
+int _prin_str(char *s);
+int _prin_int(int n);
+char *convert_any(unsigned long int nbr, int base, int low);
+int _print_binary(unsigned long int n);
+int _print_octal(unsigned long int n);
+int _print_s_hexa(unsigned long int n);
+int _print_b_hexa(unsigned long int n);
 #endif
