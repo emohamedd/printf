@@ -8,34 +8,43 @@
 
 int _printf(const char *format, ...)
 {
+	int (*ptrfun)(va_list, flag_s *);
 	va_list args;
-	int c = 0;
+	const char *p;
+	flag_s fl = {0, 0, 0};
+
+	int counter = 0;
 
 	va_start(args, format);
+	if (!format || (format[0] == '%' && !format[1]))
+		return (-1);
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
 
-	while (*format != '\0')
+	for (p = format; *p; p++)
 	{
-		if (*format == '%')
+
+		if (*p == '%')
 		{
-			format++;
-			if (*format == '%')
+			p++;
+			if (*p == '%')
 			{
-				_putchar('%');
-				c++;
+				counter += _putchar('%');
+				continue;
 			}
-			else
-			{
-				c += check(args, *format);
-			}
+
+			while (my_flags(*p, &fl))
+				p++;
+
+			ptrfun = get_print(*p);
+			counter += (ptrfun) ? ptrfun(args, &fl) : _printf("%%%c", *p);
+
 		}
 		else
-		{
-			_putchar(*format);
-			c++;
-		}
-		format++;
+			counter += _putchar(*p);
 	}
+	_putchar(-1);
 	va_end(args);
+	return (counter);
 
-	return (c);
 }

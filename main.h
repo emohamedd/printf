@@ -28,9 +28,37 @@ typedef struct flags
 	int hash;
 } flag_s;
 
+
+/* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
+
+/**
+ * struct printfhandler - contains flags
+ * @c: format special
+ * @f: point u to the correct function
+ * Return: returns
+ */
+
+
+typedef struct printfhandler
+{
+	char c;
+	int (*f)(va_list ap, flag_s *f);
+} phand;
+
+
+
+
+int my_flags(char s, flag_s *f);
 int _printf(const char *format, ...);
-int check(va_list list, char c);
+int _print_str(va_list l, flag_s *f);
+
+
+
+int _putstr(char *s);
 int _putchar(char c);
-int _prin_str(char *s);
-int _prin_int(int n);
+
+int get_flag(char s, flag_s *f);
+int (*get_print(char s))(va_list, flag_s *);
+
+
 #endif

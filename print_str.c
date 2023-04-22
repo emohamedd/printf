@@ -4,18 +4,16 @@
 
 /**
  *_prin_str - print character
- *@s: the string to print
+ *@l: argum from _printf
+ *@f: pointer struct flag
  *Return: returns
  */
 
-int _prin_str(char *s)
+int _print_str(va_list l, flag_s *f)
 {
-	int i = 0;
+	char *s = va_arg(l, char *);
 
-	while (s[i])
-	{
-		write(1, &s[i], 1);
-		i++;
-	}
-	return (i);
+	if (!s)
+		s = "null";
+	return (_putstr(s));
 }
