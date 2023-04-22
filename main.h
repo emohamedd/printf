@@ -33,9 +33,4 @@ int check(va_list list, char c);
 int _putchar(char c);
 int _prin_str(char *s);
 int _prin_int(int n);
-char *convert_any(unsigned long int nbr, int base, int low);
-int _print_binary(unsigned long int n);
-int _print_octal(unsigned long int n);
-int _print_s_hexa(unsigned long int n);
-int _print_b_hexa(unsigned long int n);
 #endif
