@@ -4,30 +4,34 @@
 
 /**
  * get_flags - turns flags if _printf find
- * @s: char to hold the flag
- * @t: pointer to the struct flag
- * Return: 1
+ * @format: format
+ * @i: pointer to the index flag
+ * Return: flags
  */
 
-int get_flags(char s, flags_t *t)
+int get_flags(const char *format, int *i)
 {
-	int i = 0;
+	int jn curr_i;
+	int flags = 0;
 
-	switch (s)
+	const char flags_ch[] = {'-', '+', '0', '#', '#', '\0'};
+	const char flag_arr[] = {F_MINUS, F_PLUS, F_ZERO, F_HASH, F_SPACE, 0};
+
+	for (curr_i = *i + 1; format[curr_i] != '\0'; curr_i++)
 	{
-		case '+':
-			t->plus = 1;
-			i = 1;
-			break;
-		case ' ':
-			t->space = 1;
-			i = 1;
-			break;
-		case '#':
-			t->hash = 1;
-			i = 1;
+		for (j = 0; flags_ch[j] != '\0'; j++)
+		{
+			if (format[curr_i] == flags_ch[j])
+			{
+				flags |= flags_arr[j];
+				break;
+			}
+		}
+		if (flags_ch[j] == 0)
 			break;
 	}
 
-	return (i);
+	*i = curr_i - 1;
+
+	return (flags);
 }
