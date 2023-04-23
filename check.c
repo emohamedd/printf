@@ -23,5 +23,11 @@ int check(va_list list, char c)
 		return (_print_octal(va_arg(list, int)));
 	else if (c == 'u')
 		return (_unsigned_int(va_arg(list, int)));
+	else if (c == 'x')
+		return (_small_hexa(va_arg(list, int)));
+	else if (c == 'X')
+		return (_big_hexa(va_arg(list, int)));
+	else if (c == 'S')
+		return (_big_s(va_arg(list, char *)));
 	return (0);
 }
