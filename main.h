@@ -50,4 +50,5 @@ int _small_hexa(unsigned int n);
 int _big_hexa(unsigned int n);
 int _big_s(char *s);
 int _print_reverse(char *s);
+int get_flags(char s, flags_t *t);
 #endif
