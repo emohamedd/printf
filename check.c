@@ -29,5 +29,7 @@ int check(va_list list, char c)
 		return (_big_hexa(va_arg(list, int)));
 	else if (c == 'S')
 		return (_big_s(va_arg(list, char *)));
+	else if (c == 'r')
+		return (_print_reverse(va_arg(list, char *)));
 	return (0);
 }
