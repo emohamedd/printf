@@ -19,5 +19,5 @@ int _putnbr(int n);
 char *convert_any(unsigned long int n, int base, int lowc);
 int _print_binary(unsigned int n);
 int _print_octal(unsigned int n);
-
+int _unsigned_int(unsigned int n);
 #endif
