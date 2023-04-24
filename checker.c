@@ -58,7 +58,8 @@ int check(const char *s, va_list list, int *i)
 		{'u', _print_unsigned_int},
 		{'r', _print_rev_string},
 		{'R', _print_rot13},
-		{'p', _print_pointer}
+		{'p', _print_pointer},
+		{'S', _print_big_s}
 	};
 
 	*i = *i + 1;

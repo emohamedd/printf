@@ -57,6 +57,10 @@ int _print_rot13(va_list list);
 int _print_rev_string(va_list list);
 /*%p*/
 int _print_pointer(va_list list);
+/*handling %S */
+char *switch_me(unsigned long int n, int base, int lowc);
+int _print_big_s(va_list list);
+
 
 
 /* the function that check the % */
