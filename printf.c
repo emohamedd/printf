@@ -1,36 +1,31 @@
 #include "main.h"
 
 /* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
-
 /**
- * _printf - print character
- * @format: the character to print
- * Return: returns
+ * _printf - our printf version for alx PLD
+ * @format: format
+ * Return: size_f
  */
 
 int _printf(const char *format, ...)
 {
-	int i = 0;
-	int c = 0;
-	va_list ptr;
+	int size_f = 0;
+	va_list args;
 
 	if (format == NULL)
-		return (-1);
-
-	va_start(ptr, format);
-	while (format[i])
 	{
-		if (format[i] == '%')
-		{
-			i++;
-			if (format[i] == '%')
-				c += _putchar('%');
-			c += check(ptr, format[i]);
-		}
-		else
-			c += _putchar(format[i]);
-		i++;
+		return (-1);
 	}
-	va_end(ptr);
-	return (c);
+
+	size_f = _strlen(format);
+	if (size_f <= 0)
+		return (0);
+
+	va_start(args, format);
+	size_f = checker(format, args);
+
+	_putchar(-1);
+	va_end(args);
+
+	return (size_f);
 }
