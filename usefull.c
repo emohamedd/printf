@@ -57,3 +57,48 @@ int _put_string(char *str)
 
 	return (i);
 }
+
+/* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
+/**
+ * _is_lower - funct check if is lower case or not
+ *
+ * @c: char
+ *
+ * Return: 1 or 0
+ */
+
+
+
+int _is_lower(char c)
+{
+	return (c >= 'a' && c <= 'z');
+}
+
+
+
+/* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
+/**
+ * *_to_upper - funct make change string to upper case
+ *
+ * @s: string
+ *
+ * Return: uppercase string
+ */
+
+
+
+char *_to_upper(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (_is_lower(s[i]))
+		{
+			s[i] = s[i] - 32;
+		}
+	}
+
+	return (s);
+}
+

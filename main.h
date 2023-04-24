@@ -40,6 +40,19 @@ int _print_char(va_list list);
 int _print_int(va_list list);
 
 
+/*all kind of base conversion */
+/*%b*/
+int _print_bin(va_list list);
+/*%o*/
+int _print_octal(va_list list);
+/*%x %X*/
+int _print_low_hexa(va_list list);
+int _print_big_hexa(va_list list);
+/*%u*/
+int _print_unsigned_int(va_list list);
+
+
+
 /* the function that check the % */
 
 int checker(const char *s, va_list list);
@@ -56,5 +69,9 @@ int buffer(char c);
 int _strlen(const char *s);
 int print(char *s);
 int _put_string(char *str);
+char *_to_upper(char *s);
+int _is_lower(char c);
+
+
 
 #endif
