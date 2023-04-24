@@ -12,8 +12,11 @@
 int _print_int(va_list list)
 {
 	int c = 0;
-	char *p = convert_any(va_arg(list, int), 10, 0);
+	char *p;
 
-	c += print((p != NULL) ? p : "null");
+	p = convert_any(va_arg(list, int), 10, 0);
+
+	c = print((p != NULL) ? p : "NULL");
+
 	return (c);
 }

@@ -5,8 +5,8 @@
  *convert_any - convert any version long int to base 2 8 10 16
  *@n: the number to convert
  *@base: base to convert into
- *@lowc: case if hexa need to be low
- *Return: return nbr at the end
+ *@lowc: is low or not
+ *Return: return pointer at the end
  */
 
 char *convert_any(long int n, int base, int lowc)
