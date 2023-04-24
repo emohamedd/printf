@@ -45,7 +45,7 @@ int _print_rot13(va_list list)
 
 
 	p = va_arg(list, char *);
-	c = _rot13((p != NULL) ? p : "NULL");
+	c = _rot13((p != NULL) ? p : "(ahyy)");
 
 	return (c);
 }
