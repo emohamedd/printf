@@ -50,8 +50,10 @@ int _print_low_hexa(va_list list);
 int _print_big_hexa(va_list list);
 /*%u*/
 int _print_unsigned_int(va_list list);
-
-
+/*%r %R*/
+int _rev_str(va_list list);
+int _rot13(char *s);
+int _print_rot13(va_list list);
 
 /* the function that check the % */
 

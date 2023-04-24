@@ -1,4 +1,14 @@
-void rot13(char *s)
+#include "main.h"
+
+/* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
+/**
+ * _rot13 - function help to crypt rot13
+ * @s: string
+ * Return: string
+ */
+
+
+int _rot13(char *s)
 {
 	int i = 0;
 	int c = 0;
@@ -17,5 +27,26 @@ void rot13(char *s)
 	}
 	return (c);
 
+}
+
+
+/* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
+/**
+ * _print_rot13 - main function of rot13
+ * @list: list
+ * Return: len of string
+ */
+
+
+int _print_rot13(va_list list)
+{
+	char *p;
+	int c;
+
+
+	p = va_arg(list, char *);
+	c = _rot13((p != NULL) ? p : "NULL");
+
+	return (c);
 }
 
