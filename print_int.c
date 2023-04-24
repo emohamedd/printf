@@ -12,9 +12,8 @@
 int _print_int(va_list list)
 {
 	int c = 0;
-	char *p = convert_any(va_arg(list, int), 10, 0);
+	c = _putnbr(va_arg(list, int), 10);
 
-	c = print((p != NULL) ? p : "NULL");
 
 	return (c);
 }
