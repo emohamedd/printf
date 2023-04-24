@@ -44,18 +44,17 @@ int _print_pointer(va_list list)
 
 	p = _magic(va_arg(list, unsigned long int), 16);
 
-	if (!_strcmp(p, "0"))
-		return (print("(null)"));
+	if (!p)
+		return (print("(nil)"));
 
-				c = print("0x");
+	c = print("0x");
 
-				if (!_strcmp(p, "-1"))
-				c += print("ffffffffffffffff");
-				else
-				c += print(p);
+	if (!_strcmp(p, "-1"))
+		c += print("ffffffffffffffff");
+	else
+		c += print(p);
 
-				return (c);
+	return (c);
 }
-
 
 
