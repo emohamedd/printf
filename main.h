@@ -54,6 +54,7 @@ int _print_unsigned_int(va_list list);
 int _rev_str(va_list list);
 int _rot13(char *s);
 int _print_rot13(va_list list);
+int _print_rev_string(va_list list);
 /*%p*/
 int _print_pointer(va_list list);
 
