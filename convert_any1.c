@@ -24,8 +24,7 @@ char *convert_any(long int n, int base, int lowc)
 		sign = '-';
 	}
 
-	do
-	{
+	do {
 		*--p = digits[n % base];
 		n /= base;
 	} while (n != 0);
