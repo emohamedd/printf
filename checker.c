@@ -50,7 +50,11 @@ int check(const char *s, va_list list, int *i)
 		{'s', _print_string},
 		{'c', _print_char},
 		{'d', _print_int},
-		{'i', _print_int}
+		{'i', _print_int},
+		{'b', _print_bin},
+		{'o', _print_octal},
+		{'x', _print_low_hexa},
+		{'X', _print_big_hexa}
 	};
 
 	*i = *i + 1;
