@@ -12,8 +12,7 @@
 int _print_int(va_list list)
 {
 	int c = 0;
+
 	c = _putnbr(va_arg(list, int), 10);
-
-
 	return (c);
 }
