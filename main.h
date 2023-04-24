@@ -13,6 +13,38 @@
 
 /* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
 /**
+ * struct parameters - typedef struct
+ * @unsign: var
+ * @plus_flag: var
+ * @space_flag: var
+ * @hash_flag: var
+ * @zero_flag: var
+ * @minus_flag: var
+ * @width: var
+ * @precision: var
+ * @h_modifier: var
+ * @l_modifier: var
+ *
+ */
+
+
+typedef struct parameters
+{
+	unsigned int unsign	: 1;
+	unsigned int plus_flag	: 1;
+	unsigned int space_flag	: 1;
+	unsigned int hash_flag	: 1;
+	unsigned int zero_flag	: 1;
+	unsigned int minus_flag	: 1;
+	unsigned int width;
+	unsigned int precision;
+	unsigned int h_modifier	: 1;
+	unsigned int l_modifier	: 1;
+} params_t;
+
+
+/* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
+/**
  * struct format_t - typedef struct
  *
  * @t: format

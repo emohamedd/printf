@@ -3,7 +3,7 @@
 
 /* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
 /**
- * print_rev_string - function reverse string %r
+ * _print_rev_string - function reverse string %r
  *
  * @list: list
  *

@@ -1,6 +1,4 @@
 #include "main.h"
-
-
 /* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
 /**
  * checker - function that controle the format commes
@@ -8,7 +6,6 @@
  * @list: the list of arguments
  * Return: size of arguments plus total size of string
  */
-
 int checker(const char *s, va_list list)
 {
 	int size, i, deffer;
@@ -33,7 +30,6 @@ int checker(const char *s, va_list list)
 
 	return (size);
 }
-
 /* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
 /**
  * check - function controlls the % elements commes
@@ -42,23 +38,16 @@ int checker(const char *s, va_list list)
  * @i: iterator
  * Return: the number of characters printed
  */
-
 int check(const char *s, va_list list, int *i)
 {
 	int size, y, n_format;
 	format formats[] = {
-		{'s', _print_string},
-		{'c', _print_char},
-		{'d', _print_int},
-		{'i', _print_int},
-		{'b', _print_bin},
-		{'o', _print_octal},
-		{'x', _print_low_hexa},
-		{'X', _print_big_hexa},
-		{'u', _print_unsigned_int},
-		{'r', _print_rev_string},
-		{'R', _print_rot13},
-		{'p', _print_pointer},
+		{'s', _print_string}, {'c', _print_char},
+		{'d', _print_int}, {'i', _print_int},
+		{'b', _print_bin}, {'o', _print_octal},
+		{'x', _print_low_hexa}, {'X', _print_big_hexa},
+		{'u', _print_unsigned_int}, {'r', _print_rev_string},
+		{'R', _print_rot13}, {'p', _print_pointer},
 		{'S', _print_big_s}
 	};
 
