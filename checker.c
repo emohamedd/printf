@@ -49,6 +49,8 @@ int check(const char *s, va_list list, int *i)
 	format formats[] = {
 		{'s', _print_string},
 		{'c', _print_char},
+		{'d', _print_int},
+		{'i', _print_int}
 	};
 
 	*i = *i + 1;
