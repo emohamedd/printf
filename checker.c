@@ -54,7 +54,8 @@ int check(const char *s, va_list list, int *i)
 		{'b', _print_bin},
 		{'o', _print_octal},
 		{'x', _print_low_hexa},
-		{'X', _print_big_hexa}
+		{'X', _print_big_hexa},
+		{'u', _print_unsigned_int}
 	};
 
 	*i = *i + 1;

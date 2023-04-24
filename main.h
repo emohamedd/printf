@@ -48,6 +48,8 @@ int _print_octal(va_list list);
 /*%x %X*/
 int _print_low_hexa(va_list list);
 int _print_big_hexa(va_list list);
+/*%u*/
+int _print_unsigned_int(va_list list);
 
 
 
