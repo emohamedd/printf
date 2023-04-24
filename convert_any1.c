@@ -9,24 +9,21 @@
 
 int putnbr(int n)
 {
-	int *counter;
+	int c;
 
 	if (n == -2147483648)
-	{
-		*counter += print("-2147483648");
-		return;
-	}
+		c += print("-2147483648");
 	if (n < 0)
 	{
-		*counter += _putchar('-');
+		c += _putchar('-');
 		n = -n;
 	}
 	if (n >= 0 && n < 10)
-		*counter += _putchar(n + '0');
+		c += _putchar(n + '0');
 	else
 	{
-		putnbr(n / 10, counter);
-		putnbr(n % 10, counter);
+		putnbr(n / 10);
+		putnbr(n % 10);
 	}
 	return (c);
 }
