@@ -1,5 +1,4 @@
 #include "main.h"
-
 /* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
 /**
  * _print_int - function print int handel %d %i
@@ -11,11 +10,10 @@
 
 int _print_int(va_list list)
 {
-	int c = 0;
+	int c;
 	char *p;
 
-	p = convert_any(va_arg(list, int), 10, 0);
-
+	p = _magic(va_arg(list, int), 10);
 	c = print((p != NULL) ? p : "NULL");
 
 	return (c);

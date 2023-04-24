@@ -36,10 +36,8 @@ int _printf(const char *format, ...);
 int _print_string(va_list list);
 /*%c*/
 int _print_char(va_list list);
-/* %i %d */
+/*%d %i */
 int _print_int(va_list list);
-
-
 
 
 /* the function that check the % */
@@ -47,13 +45,8 @@ int _print_int(va_list list);
 int checker(const char *s, va_list list);
 int check(const char *s, va_list list, int *i);
 
-
-/* to convert any type of numbers*/
-/* for negativ and positive numbers convert_any1.c*/
-char *convert_any(long int n, int base, int lowc);
-/*for positive numbers only*/
-char *convert_any2(unsigned long int n, int base, int lowc);
-
+/* the function magic to convert any to ASCII */
+char *_magic(long int n, int base);
 
 /*putchar handlers*/
 int _putchar(char c);
