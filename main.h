@@ -38,7 +38,7 @@ int _print_string(va_list list);
 int _print_char(va_list list);
 /* %i %d */
 int _print_int(va_list list);
-int _putnbr(long int n, int base);
+int putnbr(int n);
 
 
 

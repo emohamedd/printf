@@ -2,25 +2,31 @@
 
 /* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
 /**
- *_putnbr - convert any version long int to base 2 8 10 16
+ *putnbr - convert any version long int to base 2 8 10 16
  *@n: the number to convert
- *@base: base to convert into
  *Return: return nbr at the end
  */
 
-int _putnbr(long int n, int base)
+int putnbr(int n)
 {
+	int *counter;
+
+	if (n == -2147483648)
+	{
+		*counter += print("-2147483648");
+		return;
+	}
 	if (n < 0)
 	{
-		_putchar('-');
+		*counter += _putchar('-');
 		n = -n;
 	}
-	if (n > 9)
-	{
-		_putnbr(n / base, base);
-		_putnbr(n % base, base);
-	}
+	if (n >= 0 && n < 10)
+		*counter += _putchar(n + '0');
 	else
-		_putchar(n + '0');
-	return (n);
+	{
+		putnbr(n / 10, counter);
+		putnbr(n % 10, counter);
+	}
+	return (c);
 }
