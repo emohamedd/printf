@@ -57,7 +57,6 @@ int check(const char *s, va_list list, int *i)
 
 	if (s[*i] == '\0')
 		return (-1);
-
 	if (s[*i] == '%')
 	{
 		_putchar('%');
