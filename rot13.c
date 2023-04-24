@@ -41,12 +41,26 @@ int _rot13(char *s)
 int _print_rot13(va_list list)
 {
 	char *p;
-	int c;
-
+	int i, j;
+	char r[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char R[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	p = va_arg(list, char *);
-	c = _rot13((p != NULL) ? p : "(ahyy)");
 
-	return (c);
+	for (j = 0; p[j]; j++)
+	{
+		if (p[j] < 'A' || (p[j] > 'Z' && p[j] < 'a') || p[j] > 'z')
+			_putchar(p[j]);
+		else
+		{
+			for (i = 0; i <= 52; i++)
+			{
+				if (p[j] == r[i])
+					_putchar(R[i]);
+			}
+		}
+	}
+
+	return (j);
 }
 
