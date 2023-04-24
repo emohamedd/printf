@@ -54,6 +54,9 @@ int _print_unsigned_int(va_list list);
 int _rev_str(va_list list);
 int _rot13(char *s);
 int _print_rot13(va_list list);
+/*%p*/
+int _print_pointer(va_list list);
+
 
 /* the function that check the % */
 
@@ -73,7 +76,7 @@ int print(char *s);
 int _put_string(char *str);
 char *_to_upper(char *s);
 int _is_lower(char c);
-
+int _strcmp(char *s1, char *s2);
 
 
 #endif

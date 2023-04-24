@@ -101,4 +101,3 @@ char *_to_upper(char *s)
 
 	return (s);
 }
-
