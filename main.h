@@ -21,8 +21,8 @@
 
 typedef struct format_t
 {
-    char t;
-    int (*f)(va_list);
+	char t;
+	int (*f)(va_list);
 } format;
 
 /* BY EMOHAMEDD AND ABDELGHNI HAMANAR*/
